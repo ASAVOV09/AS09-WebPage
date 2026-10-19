@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create, search, edit, and save personal notes in your browser.">
+    <title>Notes | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="notes">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link active" aria-current="page">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Your notes</h1>
+            <p>Write something down, then search, edit, or delete it later. Notes stay in this browser.</p>
+        </header>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="notes-container">
+            <form id="noteForm" class="note-editor-card">
+                <input id="noteId" name="noteId" type="hidden">
+                <label for="noteTitle">Title</label>
+                <input class="note-input" id="noteTitle" name="title" type="text" maxlength="100" placeholder="Give your note a title" required>
+                <label for="noteBody">Note</label>
+                <textarea class="note-textarea" id="noteBody" name="body" maxlength="5000" placeholder="Write your note here..." required></textarea>
+                <div class="note-controls">
+                    <label for="noteColor">Color</label>
+                    <select class="note-input note-color-select" id="noteColor" name="color">
+                        <option value="indigo">Indigo</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="amber">Amber</option>
+                        <option value="rose">Rose</option>
+                    </select>
+                    <div class="note-form-actions">
+                        <button class="btn-secondary" id="cancelNoteEdit" type="button" hidden>Cancel edit</button>
+                        <button class="btn-primary" id="saveNoteButton" type="submit">Save note</button>
+                    </div>
+                </div>
+            </form>
+            <div class="notes-filter-bar">
+                <label class="visually-hidden" for="noteSearch">Search notes</label>
+                <input id="noteSearch" class="search-input" type="search" placeholder="Search your notes...">
+                <span id="notesCount" class="notes-count" aria-live="polite"></span>
+            </div>
+            <section class="notes-grid" id="notesGrid" aria-label="Saved notes"></section>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser.</p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

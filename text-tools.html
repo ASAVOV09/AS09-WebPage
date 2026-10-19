@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Count words, characters, sentences, and estimated reading time.">
+    <title>Text stats | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="text-tools">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="text-tools.html" class="nav-link active" aria-current="page">Text stats</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Text stats</h1>
+            <p>Paste or type text to see useful counts. Your text is not saved.</p>
+        </header>
+        <section class="tool-panel" aria-label="Text statistics">
+            <label for="textToAnalyze">Your text</label>
+            <textarea class="tool-textarea" id="textToAnalyze" placeholder="Start typing or paste text here..."></textarea>
+            <div class="text-stats-grid" aria-live="polite">
+                <div class="text-stat"><output id="wordCount">0</output><span>Words</span></div>
+                <div class="text-stat"><output id="characterCount">0</output><span>Characters</span></div>
+                <div class="text-stat"><output id="sentenceCount">0</output><span>Sentences</span></div>
+                <div class="text-stat"><output id="readingTime">0 min</output><span>Reading time</span></div>
+            </div>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser. <a href="index.html">All tools</a></p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

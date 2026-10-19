@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organize everyday tasks with a simple to-do list saved in your browser.">
+    <title>To-do list | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="todo">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="todo.html" class="nav-link active" aria-current="page">To-do list</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>To-do list</h1>
+            <p>Add tasks, check them off, and your list will be saved in this browser.</p>
+        </header>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="tool-panel" aria-label="To-do list">
+            <form id="todoForm" class="tool-form">
+                <label for="todoInput">New task</label>
+                <div class="tool-actions">
+                    <input class="tool-input" id="todoInput" name="task" type="text" maxlength="200" placeholder="What needs doing?" required>
+                    <button class="btn-primary" type="submit">Add task</button>
+                </div>
+            </form>
+            <div class="todo-filters" aria-label="Filter tasks">
+                <button class="btn-secondary todo-filter" type="button" data-todo-filter="all" aria-pressed="true">All</button>
+                <button class="btn-secondary todo-filter" type="button" data-todo-filter="active" aria-pressed="false">Active</button>
+                <button class="btn-secondary todo-filter" type="button" data-todo-filter="completed" aria-pressed="false">Completed</button>
+                <span id="todoCount" class="notes-count" aria-live="polite"></span>
+                <button class="btn-secondary" id="clearCompleted" type="button">Clear completed</button>
+            </div>
+            <ul class="todo-list" id="todoList" aria-label="Tasks"></ul>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser. <a href="index.html">All tools</a></p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

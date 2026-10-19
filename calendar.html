@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the calendar and save events in your browser.">
+    <title>Calendar | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="calendar">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link active" aria-current="page">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Calendar</h1>
+            <p>Select a day to view, add, or remove your events. Events are saved in this browser.</p>
+        </header>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="calendar-wrapper">
+            <div class="cal-header">
+                <button class="cal-nav-btn" type="button" id="previousMonth" aria-label="Previous month">←</button>
+                <h2 class="cal-month-year" id="calendarMonth" aria-live="polite">Month year</h2>
+                <button class="cal-nav-btn" type="button" id="nextMonth" aria-label="Next month">→</button>
+                <button class="cal-today-btn" type="button" id="goToday">Today</button>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+                <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="cal-grid" id="calendarGrid" role="grid" aria-label="Calendar dates"></div>
+            <section class="selected-day-panel" aria-labelledby="selectedDateHeading">
+                <h2 id="selectedDateHeading">Events</h2>
+                <p class="selected-date-label" id="selectedDateLabel"></p>
+                <ul class="event-list" id="eventList"></ul>
+                <form id="eventForm" class="event-form">
+                    <label for="eventTitle">New event</label>
+                    <input id="eventTitle" name="title" class="note-input" type="text" maxlength="80" placeholder="What do you need to remember?" required>
+                    <label for="eventTime">Time (optional)</label>
+                    <input id="eventTime" name="time" class="note-input" type="time">
+                    <button class="btn-primary" type="submit">Add event</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser.</p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

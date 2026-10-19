@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A live digital clock, stopwatch, and countdown timer.">
+    <title>Clock & Timer | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="clock">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link active" aria-current="page">Clock</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Clock & timer</h1>
+            <p>Keep an eye on the time, measure an interval, or set a countdown.</p>
+        </header>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="clock-container">
+            <article class="clock-panel">
+                <h2>Current time</h2>
+                <div class="digital-time" id="digitalTime" aria-live="off">--:--:--</div>
+                <p class="digital-date" id="digitalDate"></p>
+                <label class="clock-format-toggle"><input id="hourFormat" type="checkbox"> Use 24-hour time</label>
+            </article>
+            <div class="clock-tools-grid">
+                <article class="clock-panel">
+                    <h2>Stopwatch</h2>
+                    <output class="stopwatch-time" id="stopwatchDisplay" aria-live="off">00:00:00.00</output>
+                    <div class="clock-controls">
+                        <button class="btn-primary" id="stopwatchStart" type="button">Start</button>
+                        <button class="btn-secondary" id="stopwatchLap" type="button" disabled>Lap</button>
+                        <button class="btn-secondary" id="stopwatchReset" type="button">Reset</button>
+                    </div>
+                    <ol class="laps-container" id="stopwatchLaps" aria-label="Stopwatch laps"></ol>
+                </article>
+                <article class="clock-panel">
+                    <h2>Countdown timer</h2>
+                    <div class="timer-inputs">
+                        <label class="timer-input-group"><input class="timer-num-input" id="timerMinutes" type="number" min="0" max="999" value="5" inputmode="numeric"><span class="timer-label">Minutes</span></label>
+                        <span class="timer-colon" aria-hidden="true">:</span>
+                        <label class="timer-input-group"><input class="timer-num-input" id="timerSeconds" type="number" min="0" max="59" value="0" inputmode="numeric"><span class="timer-label">Seconds</span></label>
+                    </div>
+                    <output class="timer-time" id="timerDisplay" aria-live="polite">05:00</output>
+                    <div class="timer-presets" aria-label="Timer presets">
+                        <button class="preset-btn" type="button" data-seconds="60">1 min</button>
+                        <button class="preset-btn" type="button" data-seconds="300">5 min</button>
+                        <button class="preset-btn" type="button" data-seconds="600">10 min</button>
+                        <button class="preset-btn" type="button" data-seconds="1500">25 min</button>
+                    </div>
+                    <div class="clock-controls">
+                        <button class="btn-primary" id="timerStart" type="button">Start</button>
+                        <button class="btn-secondary" id="timerReset" type="button">Reset</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser.</p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

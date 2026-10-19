@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert common units for length, weight, and temperature.">
+    <title>Unit converter | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="converter">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="converter.html" class="nav-link active" aria-current="page">Unit converter</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Unit converter</h1>
+            <p>Convert length, weight, and temperature units instantly.</p>
+        </header>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="tool-panel" aria-label="Unit converter">
+            <div class="tool-form">
+                <label for="conversionCategory">Category</label>
+                <select class="tool-select" id="conversionCategory">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                </select>
+                <label for="conversionValue">Value</label>
+                <input class="tool-input" id="conversionValue" type="number" step="any" value="1" inputmode="decimal">
+                <div class="converter-row">
+                    <label>From
+                        <select class="tool-select" id="conversionFrom"></select>
+                    </label>
+                    <label>To
+                        <select class="tool-select" id="conversionTo"></select>
+                    </label>
+                </div>
+            </div>
+            <output class="tool-result" id="conversionResult" aria-live="polite">1 m = 100 cm</output>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser. <a href="index.html">All tools</a></p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Focus with a Pomodoro timer and short or long break presets.">
+    <title>Pomodoro timer | Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="pomodoro">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="pomodoro.html" class="nav-link active" aria-current="page">Pomodoro timer</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <header class="page-header">
+            <h1>Pomodoro timer</h1>
+            <p>Choose a focus or break session, then work until the timer ends.</p>
+        </header>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="tool-panel" aria-label="Pomodoro timer">
+            <div class="pomodoro-presets" aria-label="Timer presets">
+                <button class="btn-secondary pomodoro-preset" type="button" data-minutes="25" data-label="Focus" aria-pressed="true">Focus · 25 min</button>
+                <button class="btn-secondary pomodoro-preset" type="button" data-minutes="5" data-label="Short break" aria-pressed="false">Short break · 5 min</button>
+                <button class="btn-secondary pomodoro-preset" type="button" data-minutes="15" data-label="Long break" aria-pressed="false">Long break · 15 min</button>
+            </div>
+            <p class="tool-hint" id="pomodoroMode">Focus session</p>
+            <label for="pomodoroMinutes">Minutes</label>
+            <input class="tool-input" id="pomodoroMinutes" type="number" min="1" max="180" value="25">
+            <output class="tool-result" id="pomodoroDisplay" aria-live="off">25:00</output>
+            <div class="tool-actions">
+                <button class="btn-primary" id="pomodoroStart" type="button">Start</button>
+                <button class="btn-secondary" id="pomodoroReset" type="button">Reset</button>
+            </div>
+        </section>
+    </main>
+    <footer><div class="footer-content"><p>Everyday Tools — runs right in your browser. <a href="index.html">All tools</a></p></div></footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

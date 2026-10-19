@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A collection of useful everyday tools, including a calculator, calendar, notes, and more.">
+    <title>Everyday Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="logo-badge">ET</span><span class="logo-text">Everyday Tools</span></a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+                <li><a href="clock.html" class="nav-link">Clock</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </header>
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-pill">Your everyday tools, together</div>
+            <h1>Simple tools for getting things done</h1>
+            <p>Do quick calculations, keep track of dates, save notes, and find handy tools for everyday tasks. Your saved information stays in this browser.</p>
+        </section>
+        <p class="status-message" data-status role="status" aria-live="polite"></p>
+        <section class="tools-grid" aria-label="Choose a tool">
+            <article class="tool-card about-card">
+                <span class="card-icon" aria-hidden="true">ET</span>
+                <h2 class="card-title">About</h2>
+                <a href="about.html" class="card-btn">Open about page</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">01</span>
+                <h2 class="card-title">Calculator</h2>
+                <p class="card-desc">A handy calculator for the four basic operations, decimals, and parentheses. Keyboard input is supported too.</p>
+                <div class="card-preview">Try: (78 × 4) + 12</div>
+                <a href="calculator.html" class="card-btn">Open calculator</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">02</span>
+                <h2 class="card-title">Calendar</h2>
+                <p class="card-desc">Browse months, pick a day, and add events with optional times. Your events are saved on this device.</p>
+                <div class="card-preview" id="homeCalDate">Loading today's date...</div>
+                <a href="calendar.html" class="card-btn">Open calendar</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">03</span>
+                <h2 class="card-title">Notes</h2>
+                <p class="card-desc">Create, search, edit, and delete notes. Notes are saved automatically in your browser.</p>
+                <div class="card-preview" id="homeNotesCount">Checking notes...</div>
+                <a href="notes.html" class="card-btn">Open notes</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">04</span>
+                <h2 class="card-title">Clock & timer</h2>
+                <p class="card-desc">Check the live time, run a stopwatch with laps, or set a countdown timer.</p>
+                <div class="card-preview" id="homeClockPreview" aria-live="off">--:--:--</div>
+                <a href="clock.html" class="card-btn">Open clock</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">05</span>
+                <h2 class="card-title">To-do list</h2>
+                <p class="card-desc">Organize tasks, mark them complete, and keep your list saved on this device.</p>
+                <div class="card-preview">Plan your next steps</div>
+                <a href="todo.html" class="card-btn">Open to-do list</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">06</span>
+                <h2 class="card-title">Unit converter</h2>
+                <p class="card-desc">Convert common units for length, weight, and temperature.</p>
+                <div class="card-preview">Length · Weight · Temperature</div>
+                <a href="converter.html" class="card-btn">Open converter</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">07</span>
+                <h2 class="card-title">Password generator</h2>
+                <p class="card-desc">Create a random password with the length and character types you choose.</p>
+                <div class="card-preview">Generated on your device</div>
+                <a href="password.html" class="card-btn">Open generator</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">08</span>
+                <h2 class="card-title">Pomodoro timer</h2>
+                <p class="card-desc">Focus in timed sessions with short and long break presets.</p>
+                <div class="card-preview">Focus · Short break · Long break</div>
+                <a href="pomodoro.html" class="card-btn">Open Pomodoro</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">09</span>
+                <h2 class="card-title">Text stats</h2>
+                <p class="card-desc">Check word, character, sentence, and estimated reading-time counts.</p>
+                <div class="card-preview">Your text stays on this page</div>
+                <a href="text-tools.html" class="card-btn">Open text stats</a>
+            </article>
+            <article class="tool-card">
+                <span class="card-icon" aria-hidden="true">10</span>
+                <h2 class="card-title">Color contrast checker</h2>
+                <p class="card-desc">Check text and background color combinations against WCAG contrast guidelines.</p>
+                <div class="card-preview">Check readability</div>
+                <a href="contrast.html" class="card-btn">Open contrast checker</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>Everyday Tools — runs right in your browser.</p>
+            <ul class="footer-links">
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="clock.html">Clock</a></li>
+                <li><a href="todo.html">To-do list</a></li>
+                <li><a href="converter.html">Unit converter</a></li>
+                <li><a href="password.html">Password generator</a></li>
+                <li><a href="pomodoro.html">Pomodoro</a></li>
+                <li><a href="text-tools.html">Text stats</a></li>
+                <li><a href="contrast.html">Contrast checker</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
